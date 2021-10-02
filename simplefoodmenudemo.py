@@ -20,7 +20,7 @@ if readme:
 
     st.write("<a href='https://github.com/Ween-11'>Sharween </a>", unsafe_allow_html=True)
 
-st.write("Choose an option from the radio button on the side bar to continue.")
+st.write("Choose an option from the drop down on the side bar to continue.")
 
 
 option = st.sidebar.selectbox(
