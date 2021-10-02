@@ -13,7 +13,7 @@ readme = st.checkbox("readme first")
 if readme:
 
     st.write("""
-        This is a simple binary search tree demo using [streamlit](https://streamlit.io/) library. It is hosted on [heroku](https://www.heroku.com/). You may get the codes via [github](https://github.com/richieyuyongpoh/binarySearchTreeDemo)
+        This is a simple binary search tree demo using [streamlit](https://streamlit.io/) library. It is hosted on [heroku](https://www.heroku.com/). You may get the codes via [github](https://github.com/Ween-11/bstDemo)
         """)
 
     st.write ("For more info, please contact:")
@@ -38,11 +38,11 @@ if option == 'Add a food':
 
             if st.session_state.hasFood==1:
 
-                st.session_state.RBAFoodMenu.addNode(foodName,foodPrice)
+                st.session_state.SharweenFoodMenu.addNode(foodName,foodPrice)
                 st.write("[{} , RM {}] has been added to the food Menu.".format(foodName, foodPrice))
             
             else:
-                st.session_state.RBAFoodMenu = foodMenu(foodName,foodPrice)
+                st.session_state.SharweenFoodMenu = foodMenu(foodName,foodPrice)
                 st.write("[{} , RM {}] has been added to the food Menu.".format(foodName, foodPrice))
                 st.session_state.hasFood = 1
 
@@ -57,7 +57,7 @@ elif option == 'Find a food':
 
         foodName = st.text_input("Please enter the food name that you want to search for")
         
-        st.write("The food is in the Food Menu: {}".format(st.session_state.RBAFoodMenu.findNode(foodName)))
+        st.write("The food is in the Food Menu: {}".format(st.session_state.SharweenFoodMenu.findNode(foodName)))
  
 
     else:
@@ -69,7 +69,7 @@ elif option == 'Get the sorted food list':
 
     if st.session_state.hasFood ==1:
         st.write("The list in the Food Menu:")
-        st.write(pd.DataFrame(st.session_state.RBAFoodMenu.inOrderTraversal(),columns=["Food Name", "Price"]))
+        st.write(pd.DataFrame(st.session_state.SharweenFoodMenu.inOrderTraversal(),columns=["Food Name", "Price"]))
 
     else:
         st.write("Empty Food Menu.")
@@ -78,4 +78,4 @@ else:
     st.write("The food menu system has been reset.")
 
     st.session_state.hasFood = 0 
-    st.session_state.RBAFoodMenu = []
+    st.session_state.SharweenFoodMenu = []
