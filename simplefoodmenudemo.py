@@ -18,7 +18,7 @@ if readme:
 
     st.write ("For more info, please contact:")
 
-    st.write("<a href='weenmae@gmail.com'>Sharween </a>", unsafe_allow_html=True)
+    st.write("<a href='weenmae@gmail.com'>Sharween Ismail</a>", unsafe_allow_html=True)
 
 st.write("Choose an option from the drop down on the side bar to continue.")
 
